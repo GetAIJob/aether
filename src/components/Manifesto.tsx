@@ -1,5 +1,5 @@
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { Fragment, useRef } from 'react'
 
 const sentence = `Light is the oldest material we have. Before pigment, before ink, before the first hand learned to draw — there was only the sun and the shadow it cast against a wall. We work in that lineage. Each piece below is an attempt to listen to it again.`
 
@@ -43,15 +43,17 @@ export default function Manifesto() {
           <div ref={ref} className="col-span-12 md:col-span-8 md:col-start-5 mt-8 md:mt-6">
             <p className="font-display text-2xl md:text-3xl lg:text-4xl leading-[1.35]" style={{ color: 'rgba(244,241,232,0.92)', fontWeight: 300 }}>
               {words.map((w, i) => (
-                <motion.span
-                  key={i}
-                  initial={{ opacity: 0, y: 14 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.04 * i, ease: 'easeOut' }}
-                  className="inline-block mr-[0.32em]"
-                >
-                  {w}
-                </motion.span>
+                <Fragment key={i}>
+                  <motion.span
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.04 * i, ease: 'easeOut' }}
+                    className="inline-block"
+                  >
+                    {w}
+                  </motion.span>
+                  {i < words.length - 1 ? '\u00A0' : ''}
+                </Fragment>
               ))}
             </p>
 
