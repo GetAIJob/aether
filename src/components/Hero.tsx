@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react'
 import { motion } from 'framer-motion'
 import { useMousePosition } from '@/hooks/useMousePosition'
+import ErrorBoundary from './ErrorBoundary'
 
 const HeroScene = lazy(() => import('./three/HeroScene'))
 
@@ -11,9 +12,11 @@ export default function Hero() {
     <section id="top" className="relative h-screen w-screen overflow-hidden">
       {/* 3D background */}
       <div className="absolute inset-0">
-        <Suspense fallback={<div className="h-full w-full" style={{ background: '#0A0908' }} />}>
-          <HeroScene mouse={mouse} />
-        </Suspense>
+        <ErrorBoundary fallback={<div className="h-full w-full" style={{ background: 'radial-gradient(circle at 50% 55%, #1F1B17 0%, #0A0908 70%)' }} />}>
+          <Suspense fallback={<div className="h-full w-full" style={{ background: '#0A0908' }} />}>
+            <HeroScene mouse={mouse} />
+          </Suspense>
+        </ErrorBoundary>
       </div>
 
       {/* radial wash */}

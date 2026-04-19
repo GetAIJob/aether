@@ -13,10 +13,15 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id: string) => {
-          if (id.includes('three') || id.includes('@react-three')) return 'three-vendor'
+          // Keep postprocessing inside three-vendor — they are mutually dependent
+          // and splitting causes a circular chunk + TDZ runtime error.
+          if (
+            id.includes('three') ||
+            id.includes('@react-three') ||
+            id.includes('postprocessing')
+          ) return 'three-vendor'
           if (id.includes('framer-motion') || id.includes('gsap') || id.includes('@gsap')) return 'motion-vendor'
-          if (id.includes('postprocessing')) return 'postprocessing'
-          if (id.includes('@studio-freight')) return 'lenis-vendor'
+          if (id.includes('@studio-freight') || id.includes('lenis')) return 'lenis-vendor'
         },
       },
     },

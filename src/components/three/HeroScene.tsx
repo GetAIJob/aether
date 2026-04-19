@@ -1,6 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing'
-import { Environment } from '@react-three/drei'
+import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import * as THREE from 'three'
 import { Crystal, DustField, LightBeam } from './Crystal'
 import type { MousePosition } from '@/hooks/useMousePosition'
@@ -25,15 +24,14 @@ export default function HeroScene({ mouse }: Props) {
       <color attach="background" args={['#0A0908']} />
       <fog attach="fog" args={['#0A0908', 6, 14]} />
 
-      <ambientLight intensity={0.08} />
-      <directionalLight position={[3, 4, 2]} intensity={0.7} color="#F4E1C2" />
-      <pointLight position={[-2.5, -2, 2]} intensity={0.4} color="#D4A574" />
-      <pointLight position={[0, 0, 2]} intensity={0.6} color="#E8C9A0" />
-
-      <Environment preset="warehouse" environmentIntensity={0.35} />
+      <ambientLight intensity={0.25} />
+      <directionalLight position={[3, 4, 2]} intensity={1.2} color="#F4E1C2" />
+      <pointLight position={[-2.5, -2, 2]} intensity={0.6} color="#D4A574" />
+      <pointLight position={[0, 0, 2]} intensity={0.8} color="#E8C9A0" />
+      <pointLight position={[0, 3, 0]} intensity={0.5} color="#F4E1C2" />
 
       <Crystal mouse={mouse} />
-      <DustField count={260} />
+      <DustField count={240} />
       <LightBeam />
 
       <EffectComposer>
@@ -43,7 +41,6 @@ export default function HeroScene({ mouse }: Props) {
           luminanceSmoothing={0.85}
           mipmapBlur
         />
-        <Vignette eskil={false} offset={0.1} darkness={0.85} />
       </EffectComposer>
     </Canvas>
   )

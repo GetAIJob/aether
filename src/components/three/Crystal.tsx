@@ -1,6 +1,5 @@
 import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { MeshTransmissionMaterial } from '@react-three/drei'
 import * as THREE from 'three'
 import type { MousePosition } from '@/hooks/useMousePosition'
 
@@ -12,12 +11,13 @@ export function Crystal({ mouse }: Props) {
   const groupRef = useRef<THREE.Group>(null)
   const innerRef = useRef<THREE.Mesh>(null)
   const wireRef = useRef<THREE.Mesh>(null)
+  const wireOuterRef = useRef<THREE.Mesh>(null)
+  const coreRef = useRef<THREE.Mesh>(null)
 
   useFrame((state) => {
     if (!groupRef.current) return
     const t = state.clock.getElapsedTime()
 
-    // mouse parallax — exponential lerp
     groupRef.current.rotation.y +=
       (mouse.normalizedX * 0.45 + t * 0.06 - groupRef.current.rotation.y) * 0.04
     groupRef.current.rotation.x +=
@@ -31,59 +31,67 @@ export function Crystal({ mouse }: Props) {
       wireRef.current.rotation.x = -t * 0.07
       wireRef.current.rotation.z = t * 0.05
       const mat = wireRef.current.material as THREE.MeshBasicMaterial
-      mat.opacity = 0.2 + Math.sin(t * 1.1) * 0.1
+      mat.opacity = 0.22 + Math.sin(t * 1.1) * 0.08
+    }
+    if (wireOuterRef.current) {
+      wireOuterRef.current.rotation.y = t * 0.05
+      wireOuterRef.current.rotation.x = -t * 0.03
+    }
+    if (coreRef.current) {
+      const mat = coreRef.current.material as THREE.MeshStandardMaterial
+      mat.emissiveIntensity = 1.2 + Math.sin(t * 1.5) * 0.5
     }
   })
 
   return (
     <group ref={groupRef}>
-      {/* outer wireframe halo */}
-      <mesh ref={wireRef}>
+      {/* outer wireframe halo — large icosahedron */}
+      <mesh ref={wireOuterRef}>
         <icosahedronGeometry args={[1.85, 1]} />
-        <meshBasicMaterial color="#D4A574" wireframe transparent opacity={0.22} />
+        <meshBasicMaterial color="#D4A574" wireframe transparent opacity={0.16} />
       </mesh>
 
-      {/* refracting crystal */}
+      {/* mid wireframe */}
+      <mesh ref={wireRef}>
+        <octahedronGeometry args={[1.2, 2]} />
+        <meshBasicMaterial color="#E8C9A0" wireframe transparent opacity={0.22} />
+      </mesh>
+
+      {/* refracting solid (physical material — works without HDR env) */}
       <mesh ref={innerRef}>
-        <octahedronGeometry args={[1.15, 4]} />
-        <MeshTransmissionMaterial
-          backside
-          samples={6}
-          resolution={512}
-          transmission={1}
-          roughness={0.05}
-          thickness={1.4}
-          ior={1.5}
-          chromaticAberration={0.18}
-          anisotropy={0.4}
-          distortion={0.3}
-          distortionScale={0.4}
-          temporalDistortion={0.15}
+        <octahedronGeometry args={[0.95, 3]} />
+        <meshPhysicalMaterial
           color="#F4E1C2"
+          metalness={0.1}
+          roughness={0.05}
+          transmission={0.85}
+          thickness={1.6}
+          ior={1.45}
+          clearcoat={1}
+          clearcoatRoughness={0.05}
           attenuationColor="#D4A574"
           attenuationDistance={2.5}
-          background={new THREE.Color('#0A0908')}
+          transparent
+          opacity={0.9}
         />
       </mesh>
 
       {/* inner glow core */}
-      <mesh>
-        <sphereGeometry args={[0.45, 32, 32]} />
+      <mesh ref={coreRef}>
+        <sphereGeometry args={[0.42, 32, 32]} />
         <meshStandardMaterial
-          color="#E8C9A0"
+          color="#F4E1C2"
           emissive="#D4A574"
-          emissiveIntensity={1.3}
+          emissiveIntensity={1.2}
           transparent
-          opacity={0.8}
+          opacity={0.85}
         />
       </mesh>
     </group>
   )
 }
 
-interface ParticleProps {
-  count?: number
-}
+interface ParticleProps { count?: number }
 export function DustField({ count = 280 }: ParticleProps) {
   const pointsRef = useRef<THREE.Points>(null)
 
