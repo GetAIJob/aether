@@ -1,8 +1,18 @@
-# ÆTHER — A Study of Light & Time
+# ÆTHER — Premium Homepage Concept
 
-A high-end creative homepage. A digital art piece exploring the materiality of light.
+A premium homepage concept designed to immediately captivate your audience and elevate your brand's digital presence.
 
-**Live:** https://aether.risesitelab.com
+**Live preview:** https://aether.risesitelab.com
+
+## The concept
+
+Forget standard, boring templates. ÆTHER is built for brands that refuse to blend in. Soft volumetric lighting, deep atmospheric space, and smooth parallax scrolling create a cinematic, memorable user experience from the very first second.
+
+**Key design highlights:**
+
+- **High-end aesthetics** — a sophisticated dark UI with gold and indigo accents for a premium feel
+- **Cinematic motion** — smooth transitions and reactive micro-interactions that keep users scrolling
+- **Flawless usability** — beneath the Awwwards-level visuals, a clean, intuitive layout that is easy to navigate
 
 ## Stack
 
@@ -26,10 +36,4 @@ npm run build
 # Deploy dist/ to Cloudflare Pages
 ```
 
-## Concept
-
-ÆTHER is a single-page editorial experience structured as six "studies on light." The hero is a refractive crystalline form rendered in WebGL with subtle dust particulates and volumetric beams. The page reads like a printed monograph — Fraunces serif display, mono captions, asymmetric grids, slow word-stagger reveals, GSAP scroll-pinned featured study, and a quiet closing email moment.
-
-Palette: warm-black `#0A0908`, cream `#F4F1E8`, amber `#D4A574`.
-
-By Æther Studio (GrowthSite Lab) · MMXXVI
+By GrowthSite Lab · MMXXVI

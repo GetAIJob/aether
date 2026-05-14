@@ -39,14 +39,14 @@ export default function Nav() {
         <a href="#top" className="flex items-baseline gap-3">
           <span className="font-display text-2xl tracking-tight" style={{ color: '#F4F1E8' }}>Æ</span>
           <span className="font-mono text-[10px] tracking-[0.4em] uppercase" style={{ color: 'rgba(244,241,232,0.55)' }}>
-            ther / Studio
+            ther / Concept
           </span>
         </a>
 
         <div className="hidden md:flex items-center gap-10 font-mono text-[10px] tracking-[0.4em] uppercase" style={{ color: 'rgba(244,241,232,0.7)' }}>
-          <a href="#manifesto" className="draw-underline">Manifesto</a>
-          <a href="#index" className="draw-underline">Index</a>
-          <a href="#atelier" className="draw-underline">Atelier</a>
+          <a href="#manifesto" className="draw-underline">Concept</a>
+          <a href="#index" className="draw-underline">Pillars</a>
+          <a href="#atelier" className="draw-underline">Studio</a>
           <a href="#contact" className="draw-underline">Contact</a>
         </div>
 

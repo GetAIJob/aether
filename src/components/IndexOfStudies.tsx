@@ -20,16 +20,16 @@ export default function IndexOfStudies() {
         <div className="flex items-end justify-between mb-20 md:mb-28">
           <div>
             <div className="font-mono text-[10px] tracking-[0.4em] uppercase mb-6" style={{ color: 'rgba(244,241,232,0.55)' }}>
-              § 02 — Index of studies
+              § 02 — Design highlights
             </div>
             <h2 className="font-display text-6xl md:text-8xl lg:text-[8.5rem] leading-[0.85] tracking-[-0.04em]" style={{ color: '#F4F1E8', fontWeight: 300 }}>
-              Six <span className="font-display italic text-amber-gradient">studies</span>,
+              Six <span className="font-display italic text-amber-gradient">pillars</span>,
               <br />
-              one subject.
+              one experience.
             </h2>
           </div>
           <div className="hidden lg:block max-w-[18rem] text-right font-display text-base leading-relaxed" style={{ color: 'rgba(244,241,232,0.6)' }}>
-            Each volume is a discrete piece. They are best read in order, but you may begin with any one of them.
+            Each pillar shapes a distinct layer of the experience. Together they make a homepage your visitors remember.
           </div>
         </div>
 
@@ -97,7 +97,7 @@ export default function IndexOfStudies() {
                     <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">
                       <div className="flex-1">
                         <div className="font-mono text-[10px] tracking-[0.4em] uppercase mb-2" style={{ color: 'rgba(244,241,232,0.5)' }}>
-                          Study · {s.numeral} · {s.year}
+                          Pillar · {s.numeral} · {s.year}
                         </div>
                         <div className="font-display text-xl md:text-2xl leading-tight" style={{ color: '#F4F1E8', fontWeight: 400 }}>
                           {s.title}

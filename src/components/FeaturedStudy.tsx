@@ -2,9 +2,9 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
 const paragraphs = [
-  'Glass is not transparent. Glass is generous. It gives the same beam back, multiplied — split into a chord of warm umbers and pale yellows that no painter can mix and no camera can fully record.',
-  'Study II is a long observation of this generosity. A single low-angle beam meets a hand-cut prism, and we watch what happens, slowly, for the duration of an afternoon.',
-  'Nothing in the piece is invented. Everything is exact. The geometry is the geometry of the prism. The colour is the colour of the room. The viewer is what completes the work.',
+  'Motion is not decoration — it is narrative. The way a page tells your visitor where to look, what to feel, and what to do next. Æther treats every transition as a sentence in that story.',
+  'From the first hero reveal to the smallest hover, every animation is tuned for a single quality: confidence. Nothing rushes. Nothing lags. The page breathes with the scroll.',
+  'The result reads as genuinely cinematic — not because motion was added, but because nothing arbitrary has been left in. Your brand feels considered, from the opening frame onwards.',
 ]
 
 export default function FeaturedStudy() {
@@ -52,20 +52,20 @@ export default function FeaturedStudy() {
       <div className="max-w-[80rem] mx-auto relative z-10">
         {/* eyebrow */}
         <div className="flex items-baseline justify-between font-mono text-[10px] tracking-[0.4em] uppercase mb-16" style={{ color: 'rgba(244,241,232,0.55)' }}>
-          <span>§ 03 — Featured study</span>
-          <span style={{ color: 'rgba(244,241,232,0.35)' }}>10:34 / Long-form</span>
+          <span>§ 03 — Featured pillar</span>
+          <span style={{ color: 'rgba(244,241,232,0.35)' }}>Cinematic motion</span>
         </div>
 
         {/* title */}
         <motion.div style={{ y, opacity }} className="grid grid-cols-12 gap-6 mb-32">
           <div className="col-span-12 md:col-span-3">
             <div className="font-mono text-[10px] tracking-[0.4em] uppercase mb-4" style={{ color: 'rgba(212,165,116,0.7)' }}>
-              Study · II
+              Pillar · II
             </div>
             <h2 className="font-display text-5xl md:text-6xl leading-[0.85] tracking-[-0.04em]" style={{ color: '#F4F1E8', fontWeight: 300 }}>
-              Folded
+              Cinematic
               <br />
-              <span className="font-display italic">geometries.</span>
+              <span className="font-display italic">motion.</span>
             </h2>
           </div>
 
@@ -80,7 +80,7 @@ export default function FeaturedStudy() {
                 className="font-display text-xl md:text-2xl leading-[1.5] mb-8 last:mb-0"
                 style={{ color: 'rgba(244,241,232,0.85)', fontWeight: 300 }}
               >
-                {i === 0 && <span className="font-display text-7xl md:text-8xl float-left mr-3 mt-1 leading-[0.85]" style={{ color: '#D4A574', fontWeight: 300 }}>G</span>}
+                {i === 0 && <span className="font-display text-7xl md:text-8xl float-left mr-3 mt-1 leading-[0.85]" style={{ color: '#D4A574', fontWeight: 300 }}>M</span>}
                 {i === 0 ? p.slice(1) : p}
               </motion.p>
             ))}
@@ -97,10 +97,10 @@ export default function FeaturedStudy() {
           style={{ borderTop: '1px solid rgba(244,241,232,0.08)' }}
         >
           {[
-            ['Subject', 'Refraction'],
-            ['Medium', 'Hand-cut prism'],
-            ['Recorded', 'October MMXXIV'],
-            ['Duration', '4:14:09'],
+            ['Focus', 'Motion & interaction'],
+            ['Approach', 'Scroll-tied parallax'],
+            ['Crafted', 'MMXXVI'],
+            ['Performance', '60fps, effortless'],
           ].map(([k, v]) => (
             <div key={k}>
               <div className="font-mono text-[10px] tracking-[0.4em] uppercase mb-2" style={{ color: 'rgba(244,241,232,0.45)' }}>{k}</div>

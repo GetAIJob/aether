@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion'
 import { Fragment, useRef } from 'react'
 
-const sentence = `Light is the oldest material we have. Before pigment, before ink, before the first hand learned to draw — there was only the sun and the shadow it cast against a wall. We work in that lineage. Each piece below is an attempt to listen to it again.`
+const sentence = `Forget standard, boring templates. Æther is built for brands that refuse to blend in — soft volumetric lighting, deep atmospheric space, and smooth parallax scrolling create a cinematic, memorable experience from the very first second. Beneath the craft, a clean and intuitive layout that is effortless to navigate.`
 
 const words = sentence.split(' ')
 
@@ -17,8 +17,8 @@ export default function Manifesto() {
       <div className="max-w-[80rem] mx-auto">
         {/* eyebrow row */}
         <div className="flex items-baseline justify-between font-mono text-[10px] tracking-[0.4em] uppercase mb-20" style={{ color: 'rgba(244,241,232,0.55)' }}>
-          <span>§ 01 — Manifesto</span>
-          <span className="hidden md:inline" style={{ color: 'rgba(244,241,232,0.35)' }}>For the eyes only</span>
+          <span>§ 01 — The concept</span>
+          <span className="hidden md:inline" style={{ color: 'rgba(244,241,232,0.35)' }}>For brands that stand out</span>
         </div>
 
         {/* asymmetric grid */}
@@ -32,10 +32,10 @@ export default function Manifesto() {
               className="font-display text-[18rem] md:text-[22rem] leading-[0.78] tracking-[-0.06em]"
               style={{ color: '#D4A574', fontWeight: 300 }}
             >
-              L
+              F
             </motion.div>
             <div className="absolute top-2 left-32 md:left-44 font-mono text-[10px] tracking-[0.4em] uppercase" style={{ color: 'rgba(244,241,232,0.4)' }}>
-              The first letter
+              The first word
             </div>
           </div>
 
@@ -66,7 +66,7 @@ export default function Manifesto() {
             >
               <div className="hairline flex-1" />
               <span className="font-display italic text-base" style={{ color: 'rgba(244,241,232,0.6)' }}>
-                — Æther, A.D. MMXXVI
+                — The Æther concept, MMXXVI
               </span>
             </motion.div>
           </div>

@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 export default function Closing() {
   const [copied, setCopied] = useState(false)
-  const email = 'studio@aether.work'
+  const email = 'sergiu.manole2@gmail.com'
 
   const copy = async () => {
     try {
@@ -21,8 +21,8 @@ export default function Closing() {
       <div className="max-w-[80rem] mx-auto relative z-10">
         {/* eyebrow */}
         <div className="flex items-baseline justify-between font-mono text-[10px] tracking-[0.4em] uppercase mb-24" style={{ color: 'rgba(244,241,232,0.55)' }}>
-          <span>§ 05 — Coda</span>
-          <span style={{ color: 'rgba(244,241,232,0.35)' }}>Towards a beginning</span>
+          <span>§ 05 — Begin</span>
+          <span style={{ color: 'rgba(244,241,232,0.35)' }}>Your homepage, elevated</span>
         </div>
 
         {/* central quiet line */}
@@ -34,13 +34,13 @@ export default function Closing() {
           className="text-center"
         >
           <p className="font-display text-2xl md:text-3xl leading-relaxed mb-10" style={{ color: 'rgba(244,241,232,0.7)', fontWeight: 300 }}>
-            For commissions, conversations,
+            For commissions, questions,
             <br />
-            or to be quietly added to the next edition —
+            or to put your brand in front of this kind of experience —
           </p>
 
           <h2 className="font-display text-6xl md:text-8xl lg:text-[9rem] leading-[0.9] tracking-[-0.04em]" style={{ color: '#F4F1E8', fontWeight: 300 }}>
-            <span className="font-display italic">write</span> to us.
+            <span className="font-display italic">let's</span> talk.
           </h2>
         </motion.div>
 
@@ -70,11 +70,11 @@ export default function Closing() {
           </button>
 
           <div className="mt-6 flex items-center gap-6 font-mono text-[10px] tracking-[0.4em] uppercase" style={{ color: 'rgba(244,241,232,0.45)' }}>
-            <a href="https://instagram.com" className="draw-underline">Instagram</a>
+            <a href="https://wa.me/32471725086" className="draw-underline">WhatsApp</a>
             <span style={{ color: 'rgba(244,241,232,0.2)' }}>·</span>
-            <a href="https://are.na" className="draw-underline">Are.na</a>
+            <a href="https://t.me/GrowthSite_Lab" className="draw-underline">Telegram</a>
             <span style={{ color: 'rgba(244,241,232,0.2)' }}>·</span>
-            <a href="#" className="draw-underline">Newsletter</a>
+            <a href="https://risesitelab.com" className="draw-underline">GrowthSite Lab</a>
           </div>
         </motion.div>
 
@@ -89,7 +89,7 @@ export default function Closing() {
           <div className="hairline w-32" />
           <div className="font-display text-amber-gradient text-3xl" style={{ fontWeight: 300 }}>Æ</div>
           <div className="font-mono text-[10px] tracking-[0.4em] uppercase" style={{ color: 'rgba(244,241,232,0.4)' }}>
-            End of Volume I
+            Premium homepage concept · MMXXVI
           </div>
         </motion.div>
       </div>

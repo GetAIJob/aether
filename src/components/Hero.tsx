@@ -31,13 +31,13 @@ export default function Hero() {
       {/* top-left running header (Awwwards-style index) */}
       <div className="absolute top-28 left-8 md:left-14 z-10 font-mono text-[10px] tracking-[0.4em] uppercase" style={{ color: 'rgba(244,241,232,0.55)' }}>
         <div>Æther · MMXXVI</div>
-        <div className="mt-1">A series in light</div>
+        <div className="mt-1">Premium homepage concept</div>
       </div>
 
       {/* right column meta */}
       <div className="absolute top-28 right-8 md:right-14 z-10 text-right font-mono text-[10px] tracking-[0.4em] uppercase" style={{ color: 'rgba(244,241,232,0.45)' }}>
-        <div>Vol. I — VI</div>
-        <div className="mt-1">Edition I/I</div>
+        <div>Six design pillars</div>
+        <div className="mt-1">Live preview</div>
       </div>
 
       {/* center title block */}
@@ -49,7 +49,7 @@ export default function Hero() {
           className="font-mono text-[10px] tracking-[0.5em] uppercase mb-8"
           style={{ color: 'rgba(244,241,232,0.65)' }}
         >
-          — Six studies on light & time —
+          — A premium homepage concept —
         </motion.p>
 
         <motion.h1
@@ -69,7 +69,7 @@ export default function Hero() {
           className="font-display italic text-xl md:text-2xl mt-6 max-w-md text-center"
           style={{ color: 'rgba(244,241,232,0.78)', fontWeight: 400 }}
         >
-          A study of the oldest material we have.
+          Captivate your audience. Elevate your brand.
         </motion.p>
       </div>
 
@@ -92,14 +92,14 @@ export default function Hero() {
 
       {/* bottom-left credit */}
       <div className="absolute bottom-10 left-8 md:left-14 z-10 font-mono text-[10px] tracking-[0.4em] uppercase max-w-[14rem]" style={{ color: 'rgba(244,241,232,0.45)' }}>
-        <div>Composed in</div>
-        <div className="mt-1" style={{ color: 'rgba(244,241,232,0.7)' }}>Brussels &amp; Bruges</div>
+        <div>Crafted by</div>
+        <div className="mt-1" style={{ color: 'rgba(244,241,232,0.7)' }}>GrowthSite Lab</div>
       </div>
 
       {/* bottom-right credit */}
       <div className="absolute bottom-10 right-8 md:right-14 z-10 text-right font-mono text-[10px] tracking-[0.4em] uppercase max-w-[16rem]" style={{ color: 'rgba(244,241,232,0.45)' }}>
-        <div>Currently exhibiting</div>
-        <div className="mt-1" style={{ color: 'rgba(244,241,232,0.7)' }}>Online · Volume I</div>
+        <div>Interactive prototype</div>
+        <div className="mt-1" style={{ color: 'rgba(244,241,232,0.7)' }}>aether.risesitelab.com</div>
       </div>
     </section>
   )

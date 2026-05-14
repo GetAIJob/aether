@@ -7,7 +7,7 @@ export default function Atelier() {
         {/* eyebrow */}
         <div className="flex items-baseline justify-between font-mono text-[10px] tracking-[0.4em] uppercase mb-20" style={{ color: 'rgba(244,241,232,0.55)' }}>
           <span>§ 04 — Atelier</span>
-          <span style={{ color: 'rgba(244,241,232,0.35)' }}>On the studio</span>
+          <span style={{ color: 'rgba(244,241,232,0.35)' }}>Behind the concept</span>
         </div>
 
         <div className="grid grid-cols-12 gap-6 lg:gap-12">
@@ -76,16 +76,16 @@ export default function Atelier() {
               className="font-display text-5xl md:text-6xl lg:text-7xl leading-[0.88] tracking-[-0.04em] mb-10"
               style={{ color: '#F4F1E8', fontWeight: 300 }}
             >
-              On a quiet
+              Built by
               <br />
-              <span className="font-display italic">working room.</span>
+              <span className="font-display italic">a small studio.</span>
             </motion.h2>
 
             <div className="space-y-7 max-w-[34rem]">
               {[
-                'Æther is a small studio practice based between Brussels and Bruges. We make slow work — most of what we publish has been sitting still for some weeks before it leaves us.',
-                'There are two of us, a north-facing window, a single lamp, a series of hand-cut prisms in walnut boxes, and a quiet preference for the colour the sky goes around 4pm in late October.',
-                'We accept a small number of commissions each year. Work is research-led, made in close conversation, and never rushed. If that sounds like the way you would like a piece made, please say hello.',
+                'Æther is a premium homepage concept by GrowthSite Lab — an independent studio building innovative, modern websites for brands that want to stand out from their competitors.',
+                'Every concept is considered end-to-end: visual system, motion language, interaction, performance. We treat your homepage as a single crafted artifact — not a template to be filled in.',
+                'We accept a small number of commissions each year. If you are looking for a homepage that genuinely captivates and elevates your brand, please say hello.',
               ].map((p, i) => (
                 <motion.p
                   key={i}
@@ -110,20 +110,20 @@ export default function Atelier() {
               className="mt-14 grid grid-cols-2 gap-8 max-w-[28rem]"
             >
               <div>
-                <div className="font-mono text-[10px] tracking-[0.4em] uppercase mb-2" style={{ color: 'rgba(244,241,232,0.45)' }}>Founded</div>
-                <div className="font-display text-xl" style={{ color: '#F4F1E8' }}>MMXXIV</div>
+                <div className="font-mono text-[10px] tracking-[0.4em] uppercase mb-2" style={{ color: 'rgba(244,241,232,0.45)' }}>Studio</div>
+                <div className="font-display text-xl" style={{ color: '#F4F1E8' }}>GrowthSite Lab</div>
               </div>
               <div>
                 <div className="font-mono text-[10px] tracking-[0.4em] uppercase mb-2" style={{ color: 'rgba(244,241,232,0.45)' }}>Practice</div>
-                <div className="font-display text-xl" style={{ color: '#F4F1E8' }}>Two hands</div>
+                <div className="font-display text-xl" style={{ color: '#F4F1E8' }}>Premium web design</div>
               </div>
               <div>
-                <div className="font-mono text-[10px] tracking-[0.4em] uppercase mb-2" style={{ color: 'rgba(244,241,232,0.45)' }}>Located</div>
-                <div className="font-display text-xl" style={{ color: '#F4F1E8' }}>BE — Brussels</div>
+                <div className="font-mono text-[10px] tracking-[0.4em] uppercase mb-2" style={{ color: 'rgba(244,241,232,0.45)' }}>Based</div>
+                <div className="font-display text-xl" style={{ color: '#F4F1E8' }}>EU · worldwide</div>
               </div>
               <div>
-                <div className="font-mono text-[10px] tracking-[0.4em] uppercase mb-2" style={{ color: 'rgba(244,241,232,0.45)' }}>Available</div>
-                <div className="font-display text-xl" style={{ color: '#D4A574' }}>Q3 MMXXVI</div>
+                <div className="font-mono text-[10px] tracking-[0.4em] uppercase mb-2" style={{ color: 'rgba(244,241,232,0.45)' }}>Commissions</div>
+                <div className="font-display text-xl" style={{ color: '#D4A574' }}>Now open</div>
               </div>
             </motion.div>
           </div>
